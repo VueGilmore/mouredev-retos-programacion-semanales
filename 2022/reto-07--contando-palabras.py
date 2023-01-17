@@ -1,6 +1,8 @@
 '''
 Reto #7: CONTANDO PALABRAS
 
+Dificultad: MEDIA
+
 Crea un programa que cuente cuantas veces se repite cada palabra
 y que muestre el recuento final de todas ellas.
 - Los signos de puntuación no forman parte de la palabra.

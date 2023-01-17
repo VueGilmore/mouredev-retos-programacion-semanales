@@ -1,6 +1,8 @@
 '''
 Reto #4: ÁREA DE UN POLÍGONO
 
+Dificultad: FÁCIL
+
 Crea una única función (importante que sólo sea una) que sea capaz
 de calcular y retornar el área de un polígono.
 - La función recibirá por parámetro sólo UN polígono a la vez.

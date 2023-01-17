@@ -1,6 +1,8 @@
 '''
 Reto #0: EL FAMOSO "FIZZ BUZZ”
 
+Dificultad: FÁCIL
+
 Escribe un programa que muestre por consola (con un print) los
 números de 1 a 100 (ambos incluidos y con un salto de línea entre
 cada impresión), sustituyendo los siguientes:

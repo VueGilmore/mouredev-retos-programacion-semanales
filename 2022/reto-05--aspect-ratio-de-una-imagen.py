@@ -1,6 +1,8 @@
 '''
 Reto #5: ASPECT RATIO DE UNA IMAGEN
 
+Dificultad: DIFíCIL
+
 Crea un programa que se encargue de calcular el aspect ratio de una
 imagen a partir de una url.
 - Url de ejemplo: https://raw.githubusercontent.com/mouredev/

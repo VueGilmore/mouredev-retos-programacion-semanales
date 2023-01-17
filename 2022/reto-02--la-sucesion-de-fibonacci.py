@@ -1,6 +1,8 @@
 '''
 Reto #2: LA SUCESIÓN DE FIBONACCI
 
+Dificultad: DIFÍCIL
+
 Escribe un programa que imprima los 50 primeros números de la sucesión
 de Fibonacci empezando en 0.
 - La serie Fibonacci se compone por una sucesión de números en
