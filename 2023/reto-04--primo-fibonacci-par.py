@@ -12,6 +12,7 @@ Ejemplos:
 def es_fibonacci(numero):
     prev = 0
     next = 1
+
     secuencia = list()
 
     for i in range(0, numero + 2):
@@ -23,6 +24,7 @@ def es_fibonacci(numero):
 
         if prev > numero: # No necesitamos la secuencia entera, sólo encontrar (o no) el número
            break
+
     if numero in secuencia:
        return True
     else:
