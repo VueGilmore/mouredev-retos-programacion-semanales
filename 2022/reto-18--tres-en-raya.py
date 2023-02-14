@@ -52,9 +52,23 @@ Para ser posible tiene que:
 - Tener el mismo número de Xs y Os o por diferencia de uno (si el primero en jugar gana)
 - No pueden ganar los dos
 '''
-#TODO: acabar
 def check_possible_matrix(matrix):
-  if check_win(matrix, 'X') and check_win(matrix, 'O'):
+  numberOfXs = 0
+  numberOfOs = 0
+
+  for i in range(0, len(matrix)):
+    numberOfXs = numberOfXs + matrix[i].count('X')
+    numberOfOs = numberOfOs + matrix[i].count('O')
+
+  if numberOfXs < 3 and numberOfOs < 3:
+    #print('Movimientos insuficientes. La partida aún no ha terminado.')
+    return False
+  elif not numberOfXs == numberOfOs and abs(numberOfXs - numberOfOs) > 1:
+    #print('Número de Xs o Os no válido')
+    #print(f'X: {numberOfXs}')
+    #print(f'O: {numberOfOs}')
+    return False
+  elif check_win(matrix, 'X') and check_win(matrix, 'O'):
     #print('Ambos ganaron...')
     return False
   else:
@@ -76,22 +90,22 @@ def get_result_game(matrix):
 
 
 # Pruebas
-#get_result_game((('X', 'X', 'X'), ('', 'O', ''), ('O', 'O', '')))    # Gana X
-#get_result_game((('X', '', ''), ('X', 'O', ''), ('X', 'O', 'O')))    # Gana X
-#get_result_game((('X', '', 'O'), ('O', 'X', ''), ('O', '', 'X')))    # Gana X
-#get_result_game((('', 'O', 'X'), ('', 'X', 'O'), ('X', 'O', '')))    # Gana X
+get_result_game((('X', 'X', 'X'), ('', 'O', ''), ('O', 'O', '')))    # Gana X
+get_result_game((('X', '', ''), ('X', 'O', ''), ('X', 'O', 'O')))    # Gana X
+get_result_game((('X', '', 'O'), ('O', 'X', ''), ('O', '', 'X')))    # Gana X
+get_result_game((('', 'O', 'X'), ('', 'X', 'O'), ('X', 'O', '')))    # Gana X
 
-#get_result_game((('', 'X', 'O'), ('X', 'X', 'O'), ('X', 'O', 'O')))  # Gana O
-#get_result_game((('O', 'X', ''), ('X', 'O', ''), ('X', '', 'O')))    # Gana O
-#get_result_game((('O', '', ''), ('X', 'O', ''), ('X', 'X', 'O')))    # Gana O
-#get_result_game((('O', '', 'X'), ('X', 'O', 'X'), ('', '', 'O')))    # Gana O
+get_result_game((('', 'X', 'O'), ('X', 'X', 'O'), ('X', 'O', 'O')))  # Gana O
+get_result_game((('O', 'X', ''), ('X', 'O', ''), ('X', '', 'O')))    # Gana O
+get_result_game((('O', '', ''), ('X', 'O', ''), ('X', 'X', 'O')))    # Gana O
+get_result_game((('O', '', 'X'), ('X', 'O', 'X'), ('', '', 'O')))    # Gana O
 
-#get_result_game((('X', 'O', 'X'), ('X', 'O', 'O'), ('O', 'X', 'X'))) # Empate
-#get_result_game((('X', 'X', 'O'), ('O', 'X', 'X'), ('X', 'O', 'O'))) # Empate
-#get_result_game((('O', 'X', 'O'), ('X', 'O', 'X'), ('X', 'O', 'X'))) # Empate
-#get_result_game((('O', 'X', 'O'), ('O', 'X', 'X'), ('X', 'O', 'X'))) # Empate
+get_result_game((('X', 'O', 'X'), ('X', 'O', 'O'), ('O', 'X', 'X'))) # Empate
+get_result_game((('X', 'X', 'O'), ('O', 'X', 'X'), ('X', 'O', 'O'))) # Empate
+get_result_game((('O', 'X', 'O'), ('X', 'O', 'X'), ('X', 'O', 'X'))) # Empate
+get_result_game((('O', 'X', 'O'), ('O', 'X', 'X'), ('X', 'O', 'X'))) # Empate
 
 get_result_game((('O', 'X', 'X'), ('X', 'X', 'X'), ('X', 'O', 'X'))) # No valido - Mas Xs que Os
-#get_result_game((('O', 'O', 'X'), ('O', 'O', 'O'), ('X', 'O', 'X'))) # No valido - Mas Os que Xs
-#get_result_game((('X', 'X', 'X'), ('O', 'O', 'O'), ('', '', '')))    # No valido - Ambos ganan
-#get_result_game((('X', '', 'X'), ('', '', 'O'), ('', 'O', '')))      # No valido - No suficiente
+get_result_game((('O', 'O', 'X'), ('O', 'O', 'O'), ('X', 'O', 'X'))) # No valido - Mas Os que Xs
+get_result_game((('X', 'X', 'X'), ('O', 'O', 'O'), ('', '', '')))    # No valido - Ambos ganan
+get_result_game((('X', '', 'X'), ('', '', 'O'), ('', 'O', '')))      # No valido - No suficiente
