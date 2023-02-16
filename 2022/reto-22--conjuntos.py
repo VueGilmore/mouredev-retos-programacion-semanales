@@ -1,5 +1,5 @@
 '''
-Reto #22: Reto #22: CONJUNTOS
+Reto #22: CONJUNTOS
 
 Dificultad: FÁCIL  
 
